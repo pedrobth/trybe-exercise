@@ -2,25 +2,22 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const TO_DO_LIST = [
+  'eat',
+  'sleep',
+  'code',
+  'add',
+  'commit',
+  'push',
+  'repeat',
+]
+
+const genertateList = () => TO_DO_LIST.map(task => (`<li>${task}</li>`));
+
+console.log(genertateList());
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (genertateList());
 }
 
 export default App;
