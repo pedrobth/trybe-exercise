@@ -12,12 +12,12 @@ const TO_DO_LIST = [
   'repeat',
 ]
 
-const genertateList = () => TO_DO_LIST.map(task => (`<li>${task}</li>`));
-
-console.log(genertateList());
+const genertateList = () => TO_DO_LIST.map((element, index) => <li key={index}>{element}</li>);
 
 function App() {
-  return (genertateList());
+  return (<ol className="App">
+    {genertateList()}
+  </ol>);
 }
 
 export default App;
